@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="section-top">
+        <img src="{% static 'img/fon1.jpg' %}" width="100%" 
+  height="100" class="img-responsive">
+    </div>
+    <div class="section section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Автомобили
+                    </h1>
+                </div>
+                {% for product_image in products_images %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+        
+{% endblock %}
